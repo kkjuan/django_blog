@@ -21,3 +21,15 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
+class GuestBook(models.Model):
+    name = models.CharField(max_length=20)
+    email = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
+    message = models.TextField()
+    req_time = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        ordering = ['-req_time']
+        
+    def __str__(self):
+        return self.title
