@@ -19,7 +19,7 @@ class Post(models.Model):
         ordering = ['-pub_date']
         
     def __str__(self):
-        return self.title
+        return self.slug
     
 class GuestBook(models.Model):
     name = models.CharField(max_length=20)
