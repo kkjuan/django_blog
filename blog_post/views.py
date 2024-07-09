@@ -14,7 +14,7 @@ def index(requests):
 #        post_list.append("<small> {} </small> <br><br>".format(post.content))
         
 #    return HttpResponse(post_list)
-    return render(requests,"index.html", locals())
+    return render(requests,"pages/index.html", locals())
 
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.shortcuts import redirect
@@ -29,5 +29,5 @@ def showPost(requests,slug):
     # except:
     #     return redirect('/')
     
-    return render(requests,'post.html',locals())
+    return render(requests,'pages/post.html',locals())
     #return HttpResponse(slug)
