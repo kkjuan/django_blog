@@ -64,6 +64,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            "libraries": {                                          # 加入這幾行
+                "markdown_tag": "libraries.filter.markdown_filter", # 加入這幾行
+            }                                                       # 加入這幾行
         },
     },
 ]
