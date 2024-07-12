@@ -134,3 +134,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ##b kk
 ## Secure cross policy
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+##e kk
