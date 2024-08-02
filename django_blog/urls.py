@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog_post.views import index, showPost
+from blog_post.views import index, showPost, testjson
 
 
 urlpatterns = [
@@ -24,4 +24,5 @@ urlpatterns = [
     path('', index),
 #    path('blog',index), #http://127.0.0.1/blog
     path('post/<slug:slug>',showPost), # <slug"型態":slug“變數名稱>
+    path('api/test', testjson), #aKK for mysql database
 ]

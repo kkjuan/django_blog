@@ -31,3 +31,10 @@ def showPost(requests,slug):
     
     return render(requests,'pages/post.html',locals())
     #return HttpResponse(slug)
+
+#bKK    
+from django.http import JsonResponse
+def testjson(requests):
+    posts = list(Post.objects.all().values())
+    return JsonResponse(posts, status=200, safe=False)
+#eKK
