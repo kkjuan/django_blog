@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+#bKK
 import pymysql
 pymysql.install_as_MySQLdb()
+#eKK
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog_post',
+    'blog_post', #KK
+    'line_bot', #KK
 ]
 
 MIDDLEWARE = [
@@ -149,4 +152,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ##b kk
 ## Secure cross policy
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+
+#line_bot setting
+LINE_CHANNEL_ACCESS_TOKEN="L2geDMk4cHJHck2l0RufuUxoD36/oGYHSbSr17f/LMud2hiiu4yzVtaWXhpbtZ7kqtTJK0dYYFHmv6YlSRC+Pj+kOyT7fuNQ2iguIyLYaW6d99yDw8sovy5Hi0e6PF6mPjy8n+Q1/n+mq/mhNdZSoAdB04t89/1O/w1cDnyilFU="
+LINE_CHANNEL_SECRET="43ea335bad394ace1d9db0fbf056513a"
 ##e kk

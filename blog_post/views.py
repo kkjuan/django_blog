@@ -35,6 +35,7 @@ def showPost(requests,slug):
 #bKK    
 from django.http import JsonResponse
 def testjson(requests):
+    #QuerySet
     posts = list(Post.objects.all().values())
     return JsonResponse(posts, status=200, safe=False)
 #eKK

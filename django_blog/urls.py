@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blog_post.views import index, showPost, testjson
-
+from line_bot.views import callback  #aKK
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +25,6 @@ urlpatterns = [
 #    path('blog',index), #http://127.0.0.1/blog
     path('post/<slug:slug>',showPost), # <slug"型態":slug“變數名稱>
     path('api/test', testjson), #aKK for mysql database
+    path('line/', callback),  #aKK for line bot
 ]
+
