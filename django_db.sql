@@ -17,6 +17,22 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+--bKK
+CREATE USER 'django_db'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('oZat4JT3iBwk.mLF');
+GRANT USAGE ON *.* TO 'django_db'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+CREATE DATABASE IF NOT EXISTS `django_db`;
+GRANT ALL PRIVILEGES ON `django\_db`.* TO 'django_db'@'localhost';
+GRANT ALL PRIVILEGES ON `django\_db\_%`.* TO 'django_db'@'localhost';
+
+
+CREATE USER 'django_db'@'127.0.0.1' IDENTIFIED VIA mysql_native_password USING PASSWORD('oZat4JT3iBwk.mLF');
+GRANT USAGE ON *.* TO 'django_db'@'127.0.0.1' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+GRANT ALL PRIVILEGES ON `django\_db\_%`.* TO 'django_db'@'127.0.0.1';
+
+
+use `django_db`;
+--eKK
+
 --
 -- 資料庫： `django_db`
 --
